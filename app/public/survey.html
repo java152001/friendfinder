@@ -119,10 +119,45 @@
             <option value="5">5 - Strongly Agree</option>
         </select>
 
+        <center><button class="btn btn-danger btn-lg" id='add-btn'>
+                >Submit Survey</button></center>
+
 
     </div>
 
 
 </body>
+
+<script type="text/javascript">
+    // Question: What does this code do?
+    $("#add-btn").on("click", function(event) {
+      event.preventDefault();
+
+      var newFriend = {
+        name: $("#name").val().trim(),
+        photo: $("#userImage").val().trim(),
+        scores:[
+            $('#q1').val(),
+            $('#q2').val(),
+            $('#q3').val(),
+            $('#q4').val(),
+            $('#q5').val(),
+            $('#q6').val(),
+            $('#q7').val(),
+            $('#q8').val(),
+            $('#q9').val(),
+            $('#q10').val(),
+        ]
+      };
+
+      // Question: What does this code do??
+      $.post("/api/add", newFriend)
+        .then(function(data) {
+          console.log(data);
+        });
+
+    });
+
+  </script>
 
 </html>

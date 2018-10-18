@@ -1,7 +1,5 @@
 var path = require('path');
 
-console.log(path.join(__dirname, "../public/survey.html"));
-
 module.exports = (function() {
     'use strict';
     var htmlRoutes = require('express').Router();
@@ -9,7 +7,7 @@ module.exports = (function() {
     htmlRoutes.get('/', function (req, res) {
         res.sendFile(path.join(__dirname, "../public/home.html"));
     });
-    
+
     htmlRoutes.get('/survey', function (req, res) {
         res.sendFile(path.join(__dirname, "../public/survey.html"));
     });
