@@ -33,7 +33,7 @@ var friends = [
 },
 {
     "name": "Spongebob",
-    "photo": "",
+    "photo": "https://i.kym-cdn.com/entries/icons/original/000/022/940/mockingspongebobbb.jpg",
     "scores": [
         1,
         1,
